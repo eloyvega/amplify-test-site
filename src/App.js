@@ -1,7 +1,17 @@
-import "./App.css";
+import { useState } from "react";
 
 function App() {
-  return <h1>This is my site</h1>;
+  const [message, setMessage] = useState("");
+  return (
+    <div>
+      <input
+        type="text"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+      <p>{message}</p>
+    </div>
+  );
 }
 
 export default App;
